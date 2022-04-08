@@ -1,0 +1,10 @@
+<mat-card style="text-align: center; margin: 20px">
+  {{ currentBreakpoint }}
+</mat-card>
+
+<div class="container" [ngSwitch]="currentBreakpoint">
+  <span class="large" *ngSwitchCase="Breakpoints.Large"> Large </span>
+  <span class="medium" *ngSwitchCase="Breakpoints.Medium"> Medium </span>
+  <span class="small" *ngSwitchCase="Breakpoints.Small"> Small </span>
+  <span class="custom" *ngSwitchCase="'(min-width: 500px)'"> Custom </span>
+</div>
